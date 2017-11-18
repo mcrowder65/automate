@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +36,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "coveralls": "^3.0.0",
     "css-loader": "^0.28.7",
     "enzyme": "^2.9.1",
     "eslint": "^4.11.0",
