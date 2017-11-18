@@ -6,13 +6,15 @@
   "scripts": {
     "test": "jest --coverage",
     "start": "webpack-dev-server",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "build": "webpack",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "dev": "nodemon --ignore .git --ignore build --ignore node_modules --exec 'webpack && babel-node src/server/index.js'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express-rest-mongo": "0.0.21",
+    "express-rest-mongo": "0.0.22",
     "html-webpack-plugin": "^2.30.1",
     "prop-types": "^15.6.0",
     "react": "^15.6.2",
@@ -26,6 +28,7 @@
     "webpack-dev-server": "^2.9.4"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.2",
     "babel-jest": "^21.2.0",
@@ -36,6 +39,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-watch": "^2.0.7",
     "coveralls": "^3.0.0",
     "css-loader": "^0.28.7",
     "enzyme": "^2.9.1",
@@ -46,6 +50,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.5.0",
     "jest": "^21.2.1",
+    "nodemon": "^1.12.1",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.1.1",
     "style-loader": "^0.18.2"

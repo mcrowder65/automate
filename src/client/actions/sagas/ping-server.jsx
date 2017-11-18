@@ -3,9 +3,10 @@ import {setPing} from "../index";
 
 export const apiCall = async () => {
     //this is up to you whether or not you want to implement this server...
-    const res = await fetch("http://localhost:3000/ping", {method: "GET"});
+    const res = await fetch("http://localhost:3000/ping", {method: "get"});
     return res.text();
 };
+
 
 //eslint-disable-next-line
 export function* pingServer() {

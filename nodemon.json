@@ -1,0 +1,12 @@
+{
+  "ignore": [
+    ".git",
+    "node_modules",
+    "build"
+  ],
+  "watch": [
+    "test/**/*.*",
+    "src/**/*.*"
+  ],
+  "ext": "js jsx json css"
+}
